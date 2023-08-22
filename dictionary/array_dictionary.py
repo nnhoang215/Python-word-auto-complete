@@ -37,10 +37,13 @@ class ArrayDictionary(BaseDictionary):
         """
         # TO BE IMPLEMENTED
 
-
+        # Create a dummy WordFrequency object for the searched word
         dummy_word = WordFrequency(word, 0)
+
+        # Find the index to insert the dummy WordFrequency object
         index = bisect.bisect_left(self.words, dummy_word)
 
+        # If the word in that index is the same with the searched word, the searched word is found in the list
         if index < len(self.words) and self.words[index].word == word:
             return self.words[index].frequency
         return 0
@@ -69,9 +72,11 @@ class ArrayDictionary(BaseDictionary):
         # find the position of 'word' in the list, if exists, will be at idx-1
         # TO BE IMPLEMENTED
 
+        # Create a dummy WordFrequency object for the deleted word
         dummy_word = WordFrequency(word, 0)
-        index = bisect.bisect_left(self.words, dummy_word)
 
+        # Search for that deleted word in the list, delete it if found
+        index = bisect.bisect_left(self.words, dummy_word)
         if index < len(self.words) and self.words[index].word == word:
             del self.words[index]
             return True
@@ -84,15 +89,26 @@ class ArrayDictionary(BaseDictionary):
         @param prefix_word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'prefix_word'
         """
+        # Create a dummy WordFrequency object for the prefix word
         dummy_word = WordFrequency(prefix_word, 0)
+
+        # Caclulate the index to insert prefix word
         index = bisect.bisect_left(self.words, dummy_word)
+
+        # Create a list of possible words having that prefix
         autocomplete_list = []
 
+        # Only scan the part of the list behind that index to optimize scanning
         for word_freq in self.words[index:]:
+
+            # If a word starts with the prefix, append it to the possible word list
             if word_freq.word.startswith(prefix_word):
                 autocomplete_list.append(word_freq)
             else:
                 break
 
+        # Sort the list of possible words in descending order based on the word frequency
         autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
+
+        # Return the top 3 most possible word
         return autocomplete_list[:3]

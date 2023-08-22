@@ -24,7 +24,7 @@ class TrieDictionary(BaseDictionary):
 
     def __init__(self):
         # TO BE IMPLEMENTED
-        pass
+        self.root = TrieNode()
 
     def build_dictionary(self, words_frequencies: [WordFrequency]):
         """
@@ -32,6 +32,8 @@ class TrieDictionary(BaseDictionary):
         @param words_frequencies: list of (word, frequency) to be stored
         """
         # TO BE IMPLEMENTED
+        for word_freq in words_frequencies:
+            self.add_word_frequency(word_freq)
 
 
     def search(self, word: str) -> int:
@@ -42,6 +44,9 @@ class TrieDictionary(BaseDictionary):
         """
         # TO BE IMPLEMENTED
 
+        node = self._traverse_word(word)
+        if node and node.is_last:
+            return node.frequency
         return 0
 
 
@@ -54,7 +59,21 @@ class TrieDictionary(BaseDictionary):
 
         # TO BE IMPLEMENTED
 
-        return False
+        current = self.root
+        word = word_frequency.word
+
+        for letter in word:
+            if letter not in current.children:
+                current.children[letter] = TrieNode(letter)
+            current = current.children[letter]
+
+        if current.is_last:
+            current.frequency = word_frequency.frequency
+            return False
+
+        current.is_last = True
+        current.frequency = word_frequency.frequency
+        return True
 
     def delete_word(self, word: str) -> bool:
         """
@@ -63,6 +82,10 @@ class TrieDictionary(BaseDictionary):
         @return: whether succeeded, e.g. return False when point not found
         """
 
+        node = self._traverse_word(word)
+        if node and node.is_last:
+            node.is_last = False
+            return True
         return False
 
 
@@ -72,4 +95,28 @@ class TrieDictionary(BaseDictionary):
         @param word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'word'
         """
-        return []
+        node = self._traverse_word(word)
+        if not node:
+            return []
+
+        autocomplete_list = []
+        self._collect_autocomplete_words(node, word, autocomplete_list)
+        autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
+        return autocomplete_list[:3]
+
+    def _traverse_word(self, word: str) -> TrieNode:
+        current = self.root
+
+        for letter in word:
+            if letter not in current.children:
+                return None
+            current = current.children[letter]
+
+        return current
+
+    def _collect_autocomplete_words(self, node: TrieNode, word_prefix: str, result_list: list):
+        if node.is_last:
+            result_list.append(WordFrequency(word_prefix, node.frequency))
+        for letter, child_node in node.children.items():
+            self._collect_autocomplete_words(
+                child_node, word_prefix + letter, result_list)
