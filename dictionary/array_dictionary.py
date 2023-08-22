@@ -15,7 +15,7 @@ class ArrayDictionary(BaseDictionary):
 
     def __init__(self):
         # TO BE IMPLEMENTED
-        pass
+        self.words = []
 
 
     def build_dictionary(self, words_frequencies: [WordFrequency]):
@@ -23,7 +23,10 @@ class ArrayDictionary(BaseDictionary):
         construct the data structure to store nodes
         @param words_frequencies: list of (word, frequency) to be stored
         """
+
         # TO BE IMPLEMENTED
+        # Need to sort this list
+        self.words = sorted(words_frequencies, key=lambda wf: wf.word)
 
 
     def search(self, word: str) -> int:
@@ -34,6 +37,12 @@ class ArrayDictionary(BaseDictionary):
         """
         # TO BE IMPLEMENTED
 
+
+        dummy_word = WordFrequency(word, 0)
+        index = bisect.bisect_left(self.words, dummy_word)
+
+        if index < len(self.words) and self.words[index].word == word:
+            return self.words[index].frequency
         return 0
 
     def add_word_frequency(self, word_frequency: WordFrequency) -> bool:
@@ -44,7 +53,12 @@ class ArrayDictionary(BaseDictionary):
         """
         # TO BE IMPLEMENTED
 
-        return False
+        index = bisect.bisect_left(self.words, word_frequency)
+
+        if index < len(self.words) and self.words[index].word == word_frequency.word:
+            return False  # Word already exists
+        self.words.insert(index, word_frequency)
+        return True
 
     def delete_word(self, word: str) -> bool:
         """
@@ -55,6 +69,12 @@ class ArrayDictionary(BaseDictionary):
         # find the position of 'word' in the list, if exists, will be at idx-1
         # TO BE IMPLEMENTED
 
+        dummy_word = WordFrequency(word, 0)
+        index = bisect.bisect_left(self.words, dummy_word)
+
+        if index < len(self.words) and self.words[index].word == word:
+            del self.words[index]
+            return True
         return False
 
 
@@ -64,4 +84,15 @@ class ArrayDictionary(BaseDictionary):
         @param prefix_word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'prefix_word'
         """
-        return []
+        dummy_word = WordFrequency(prefix_word, 0)
+        index = bisect.bisect_left(self.words, dummy_word)
+        autocomplete_list = []
+
+        for word_freq in self.words[index:]:
+            if word_freq.word.startswith(prefix_word):
+                autocomplete_list.append(word_freq)
+            else:
+                break
+
+        autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
+        return autocomplete_list[:3]
