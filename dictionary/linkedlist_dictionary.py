@@ -1,7 +1,6 @@
 from dictionary.base_dictionary import BaseDictionary
 from dictionary.word_frequency import WordFrequency
 
-
 class ListNode:
     '''
     Define a node in the linked list
@@ -22,17 +21,20 @@ class ListNode:
 class LinkedListDictionary(BaseDictionary):
 
     def __init__(self):
-        # TO BE IMPLEMENTED
-        pass
-
+        # Initialize the linked list
+        self.head = None
 
     def build_dictionary(self, words_frequencies: [WordFrequency]):
         """
         construct the data structure to store nodes
         @param words_frequencies: list of (word, frequency) to be stored
         """
-        # TO BE IMPLEMENTED
+        # Sort the input list of WordFrequency objects by word
+        # sorted_words_frequencies = sorted(words_frequencies, key=lambda wf: wf.word)
 
+        # Create a linked list of nodes from the sorted list of WordFrequency objects
+        for word_freq in words_frequencies:
+            self.add_word_frequency(word_freq)
 
     def search(self, word: str) -> int:
         """
@@ -40,8 +42,11 @@ class LinkedListDictionary(BaseDictionary):
         @param word: the word to be searched
         @return: frequency > 0 if found and 0 if NOT found
         """
-
-        # TO BE IMPLEMENTED
+        current = self.head
+        while current:
+            if current.word_frequency.word == word:
+                return current.word_frequency.frequency
+            current = current.next
         return 0
 
     def add_word_frequency(self, word_frequency: WordFrequency) -> bool:
@@ -50,30 +55,53 @@ class LinkedListDictionary(BaseDictionary):
         @param word_frequency: (word, frequency) to be added
         :return: True whether succeeded, False when word is already in the dictionary
         """
+        # Check if the word is already in the dictionary
+        if self.search(word_frequency.word) > 0:
+            return False
 
-        # TO BE IMPLEMENTED
-        return False
+        # Create a new node with the given WordFrequency
+        new_node = ListNode(word_frequency)
+
+        # Insert the new node at the beginning of the linked list
+        new_node.next = self.head
+        self.head = new_node
+        return True
 
     def delete_word(self, word: str) -> bool:
         """
         delete a word from the dictionary
         @param word: word to be deleted
-        @return: whether succeeded, e.g. return False when point not found
+        @return: whether succeeded, e.g. return False when word not found
         """
+        current = self.head
+        prev = None
 
-        # TO BE IMPLEMENTED
+        while current:
+            if current.word_frequency.word == word:
+                if prev:
+                    prev.next = current.next
+                else:
+                    self.head = current.next
+                return True
+            prev = current
+            current = current.next
         return False
 
-
-    def autocomplete(self, word: str) -> [WordFrequency]:
+    def autocomplete(self, prefix_word: str) -> [WordFrequency]:
         """
-        return a list of 3 most-frequent words in the dictionary that have 'word' as a prefix
-        @param word: word to be autocompleted
-        @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'word'
+        return a list of 3 most-frequent words in the dictionary that have 'prefix_word' as a prefix
+        @param prefix_word: word to be autocompleted
+        @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'prefix_word'
         """
+        current = self.head
+        autocomplete_list = []
 
-        # TO BE IMPLEMENTED
-        return []
+        while current:
+            if current.word_frequency.word.startswith(prefix_word):
+                autocomplete_list.append(current.word_frequency)
+            current = current.next
 
+        # Sort the list of possible words in descending order based on the word frequency
+        autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
 
-
+        return autocomplete_list[:3]
