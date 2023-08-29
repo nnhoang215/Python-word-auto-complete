@@ -34,7 +34,12 @@ class LinkedListDictionary(BaseDictionary):
 
         # Create a linked list of nodes from the sorted list of WordFrequency objects
         for word_freq in words_frequencies:
-            self.add_word_frequency(word_freq)
+            # Create a new node with the given WordFrequency
+            new_node = ListNode(word_freq)
+
+            # Insert the new node at the beginning of the linked list
+            new_node.next = self.head
+            self.head = new_node
 
     def search(self, word: str) -> int:
         """
