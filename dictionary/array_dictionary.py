@@ -89,23 +89,16 @@ class ArrayDictionary(BaseDictionary):
         @param prefix_word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'prefix_word'
         """
-        # Create a dummy WordFrequency object for the prefix word
-        dummy_word = WordFrequency(prefix_word, 0)
-
-        # Caclulate the index to insert prefix word
-        index = bisect.bisect_left(self.words, dummy_word)
 
         # Create a list of possible words having that prefix
         autocomplete_list = []
 
         # Only scan the part of the list behind that index to optimize scanning
-        for word_freq in self.words[index:]:
+        for word_freq in self.words:
 
             # If a word starts with the prefix, append it to the possible word list
             if word_freq.word.startswith(prefix_word):
                 autocomplete_list.append(word_freq)
-            else:
-                break
 
         # Sort the list of possible words in descending order based on the word frequency
         autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
