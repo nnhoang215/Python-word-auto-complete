@@ -1,7 +1,7 @@
 from dictionary.word_frequency import WordFrequency
 from dictionary.base_dictionary import BaseDictionary
 import bisect
-
+from time import perf_counter_ns
 
 # ------------------------------------------------------------------------
 # This class is required TO BE IMPLEMENTED
@@ -30,6 +30,8 @@ class ArrayDictionary(BaseDictionary):
 
 
     def search(self, word: str) -> int:
+        time_1 = perf_counter_ns()
+    
         """
         search for a word
         @param word: the word to be searched
@@ -45,7 +47,11 @@ class ArrayDictionary(BaseDictionary):
 
         # If the word in that index is the same with the searched word, the searched word is found in the list
         if index < len(self.words) and self.words[index].word == word:
+            time_2 = perf_counter_ns()
+            print("Search:", time_2 - time_1)
             return self.words[index].frequency
+        time_3 = perf_counter_ns()
+        print("Search:", time_3 - time_1)
         return 0
 
     def add_word_frequency(self, word_frequency: WordFrequency) -> bool:
@@ -56,11 +62,16 @@ class ArrayDictionary(BaseDictionary):
         """
         # TO BE IMPLEMENTED
 
+        time_1 = perf_counter_ns()
         index = bisect.bisect_left(self.words, word_frequency)
 
         if index < len(self.words) and self.words[index].word == word_frequency.word:
+            time_2 = perf_counter_ns()
+            print("Add:", time_2 - time_1)
             return False  # Word already exists
         self.words.insert(index, word_frequency)
+        time_3 = perf_counter_ns()
+        print("Add:", time_3 - time_1)
         return True
 
     def delete_word(self, word: str) -> bool:
@@ -71,7 +82,7 @@ class ArrayDictionary(BaseDictionary):
         """
         # find the position of 'word' in the list, if exists, will be at idx-1
         # TO BE IMPLEMENTED
-
+        time_1 = perf_counter_ns()
         # Create a dummy WordFrequency object for the deleted word
         dummy_word = WordFrequency(word, 0)
 
@@ -79,7 +90,11 @@ class ArrayDictionary(BaseDictionary):
         index = bisect.bisect_left(self.words, dummy_word)
         if index < len(self.words) and self.words[index].word == word:
             del self.words[index]
+            time_2 = perf_counter_ns()
+            print("Delete:", time_2 - time_1)
             return True
+        time_3 = perf_counter_ns()
+        print("Delete:", time_3 - time_1)
         return False
 
 
@@ -89,7 +104,7 @@ class ArrayDictionary(BaseDictionary):
         @param prefix_word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'prefix_word'
         """
-
+        time_1 = perf_counter_ns()
         # Create a list of possible words having that prefix
         autocomplete_list = []
 
@@ -103,5 +118,7 @@ class ArrayDictionary(BaseDictionary):
         # Sort the list of possible words in descending order based on the word frequency
         autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
 
+        time_2 = perf_counter_ns()
+        print("Autocomplete:", time_2 - time_1)
         # Return the top 3 most possible word
         return autocomplete_list[:3]
