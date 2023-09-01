@@ -1,0 +1,14 @@
+Found 'agnosticism' with frequency 237776
+Delete 'agnosticism' succeeded
+NOT Found 'agnosticism'
+NOT Found 'marketplace'
+Add 'marketplace' succeeded
+Found 'marketplace' with frequency 123456
+Autocomplete for 'dress': [ dressed: 6178034  dressing: 5944875  dressers: 674582  ]
+Delete 'dress' failed
+Autocomplete for 'dressma': [ dressmakers: 115332  ]
+Found 'teaspoons' with frequency 787293
+Autocomplete for 'teas': [ teaspoon: 2720378  teaspoons: 787293  teasers: 517803  ]
+Delete 'teasp' failed
+Autocomplete for 'teaspoo': [ teaspoon: 2720378  teaspoons: 787293  teaspoonful: 84227  ]
+Autocomplete for 'superc': [ supercomputer: 596172  supercharged: 542418  supercomputing: 519005  ]
