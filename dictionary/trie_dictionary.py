@@ -68,7 +68,6 @@ class TrieDictionary(BaseDictionary):
             current = current.children[letter]
 
         if current.is_last:
-            current.frequency = word_frequency.frequency
             return False
 
         current.is_last = True
