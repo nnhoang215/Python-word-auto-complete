@@ -1,3 +1,4 @@
+from time import perf_counter_ns
 from dictionary.base_dictionary import BaseDictionary
 from dictionary.word_frequency import WordFrequency
 
@@ -47,11 +48,16 @@ class LinkedListDictionary(BaseDictionary):
         @param word: the word to be searched
         @return: frequency > 0 if found and 0 if NOT found
         """
+        time_1 = perf_counter_ns()
         current = self.head
         while current:
             if current.word_frequency.word == word:
+                time_2 = perf_counter_ns()
+                print("Search:", time_2 - time_1)
                 return current.word_frequency.frequency
             current = current.next
+        time_3 = perf_counter_ns()
+        print("Search:", time_3 - time_1)
         return 0
 
     def add_word_frequency(self, word_frequency: WordFrequency) -> bool:
@@ -61,7 +67,10 @@ class LinkedListDictionary(BaseDictionary):
         :return: True whether succeeded, False when word is already in the dictionary
         """
         # Check if the word is already in the dictionary
+        time_1 = perf_counter_ns()
         if self.search(word_frequency.word) > 0:
+            time_2 = perf_counter_ns()
+            print("Add:", time_2 - time_1)
             return False
 
         # Create a new node with the given WordFrequency
@@ -70,6 +79,8 @@ class LinkedListDictionary(BaseDictionary):
         # Insert the new node at the beginning of the linked list
         new_node.next = self.head
         self.head = new_node
+        time_3 = perf_counter_ns()
+        print("Add:", time_3 - time_1)
         return True
 
     def delete_word(self, word: str) -> bool:
@@ -78,6 +89,7 @@ class LinkedListDictionary(BaseDictionary):
         @param word: word to be deleted
         @return: whether succeeded, e.g. return False when word not found
         """
+        time_1 = perf_counter_ns()
         current = self.head
         prev = None
 
@@ -87,9 +99,13 @@ class LinkedListDictionary(BaseDictionary):
                     prev.next = current.next
                 else:
                     self.head = current.next
+                time_2 = perf_counter_ns()
+                print("Delete:", time_2 - time_1)
                 return True
             prev = current
             current = current.next
+        time_3 = perf_counter_ns()
+        print("Delete:", time_3 - time_1)
         return False
 
     def autocomplete(self, prefix_word: str) -> [WordFrequency]:
@@ -98,6 +114,7 @@ class LinkedListDictionary(BaseDictionary):
         @param prefix_word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'prefix_word'
         """
+        time_1 = perf_counter_ns()
         current = self.head
         autocomplete_list = []
 
@@ -108,5 +125,6 @@ class LinkedListDictionary(BaseDictionary):
 
         # Sort the list of possible words in descending order based on the word frequency
         autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
-
+        time_2 = perf_counter_ns()
+        print("Autocomplete:", time_2 - time_1)
         return autocomplete_list[:3]

@@ -1,3 +1,4 @@
+from time import perf_counter_ns
 from dictionary.base_dictionary import BaseDictionary
 from dictionary.word_frequency import WordFrequency
 
@@ -43,10 +44,14 @@ class TrieDictionary(BaseDictionary):
         @return: frequency > 0 if found and 0 if NOT found
         """
         # TO BE IMPLEMENTED
-
+        time_1 = perf_counter_ns()
         node = self._traverse_word(word)
         if node and node.is_last:
+            time_2 = perf_counter_ns()
+            print("Search:", time_2 - time_1)
             return node.frequency
+        time_3 = perf_counter_ns()
+        print("Search:", time_3 - time_1)
         return 0
 
 
@@ -56,9 +61,7 @@ class TrieDictionary(BaseDictionary):
         @param word_frequency: (word, frequency) to be added
         :return: True whether succeeded, False when word is already in the dictionary
         """
-
-        # TO BE IMPLEMENTED
-
+        time_1 = perf_counter_ns()
         current = self.root
         word = word_frequency.word
 
@@ -68,10 +71,14 @@ class TrieDictionary(BaseDictionary):
             current = current.children[letter]
 
         if current.is_last:
+            time_2 = perf_counter_ns()
+            print("Add:", time_2 - time_1)
             return False
 
         current.is_last = True
         current.frequency = word_frequency.frequency
+        time_3 = perf_counter_ns()
+        print("Add:", time_3 - time_1)
         return True
 
     def delete_word(self, word: str) -> bool:
@@ -80,11 +87,15 @@ class TrieDictionary(BaseDictionary):
         @param word: word to be deleted
         @return: whether succeeded, e.g. return False when point not found
         """
-
+        time_1 = perf_counter_ns()
         node = self._traverse_word(word)
         if node and node.is_last:
             node.is_last = False
+            time_2 = perf_counter_ns()
+            print("Delete:", time_2 - time_1)
             return True
+        time_3 = perf_counter_ns()
+        print("Delete:", time_3 - time_1)
         return False
 
 
@@ -94,13 +105,18 @@ class TrieDictionary(BaseDictionary):
         @param word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'word'
         """
+        time_1 = perf_counter_ns()
         node = self._traverse_word(word)
         if not node:
+            time_2 = perf_counter_ns()
+            print("Autocomplete:", time_2 - time_1)
             return []
 
         autocomplete_list = []
         self._collect_autocomplete_words(node, word, autocomplete_list)
         autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
+        time_3 = perf_counter_ns()
+        print("Autocomplete:", time_3 - time_1)
         return autocomplete_list[:3]
 
     def _traverse_word(self, word: str) -> TrieNode:
