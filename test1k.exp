@@ -1,14 +1,40 @@
-Found 'uneasiness' with frequency 214392
-Delete 'uneasiness' succeeded
-NOT Found 'uneasiness'
-Found 'attendants' with frequency 1171665
-Add 'attendants' failed
-Found 'attendants' with frequency 1171665
-Autocomplete for 'outp': [ output: 55819696  ]
-Delete 'output' succeeded
-Autocomplete for 'outp': [ ]
-Found 'reimbursed' with frequency 1344886
-Autocomplete for 'reimb': [ reimbursed: 1344886  ]
-Delete 'reimbur' failed
-Autocomplete for 'reim': [ reimbursed: 1344886  ]
-Autocomplete for 'laza': [ lazar: 321985  ]
+NOT Found 'grand'
+NOT Found 'and'
+NOT Found 'violet'
+NOT Found 'xray'
+Add 'henry' succeeded
+Add 'han' succeeded
+Add 'sinka' succeeded
+Add 'canoo' succeeded
+Add 'frendop' succeeded
+Add 'silicpy' succeeded
+Add 'frin' succeeded
+Add 'dlen' succeeded
+Add 'dnedi' succeeded
+Add 'akalfr' succeeded
+Found 'henry' with frequency 123456
+Found 'han' with frequency 2343
+Found 'frin' with frequency 43434
+Found 'akalfr' with frequency 3232
+Found 'silicpy' with frequency 1759
+Found 'frendop' with frequency 32324
+Autocomplete for 'fis': [ ]
+Autocomplete for 'can': [ candlestick: 597438  canadas: 103105  canonized: 97556  ]
+Autocomplete for 'sili': [ silicpy: 1759  ]
+Autocomplete for 'hon': [ hony: 32612  ]
+Autocomplete for 'ak': [ akalfr: 3232  ]
+Autocomplete for 'an': [ anime: 31334688  anemia: 1860823  anus: 1472531  ]
+Autocomplete for 'n': [ neumann: 1401942  nestled: 1258420  nagar: 994395  ]
+Autocomplete for 'sl': [ slatkin: 94920  slunk: 40167  ]
+Autocomplete for 'c': [ control: 215560453  client: 69189527  crime: 40361756  ]
+Autocomplete for 'm': [ modeling: 15474514  minolta: 7160032  mib: 3731368  ]
+Delete 'canoo' succeeded
+Delete 'henry' succeeded
+Delete 'han' succeeded
+Delete 'sinka' succeeded
+Delete 'akalfr' succeeded
+Delete 'lend' failed
+Delete 'frendop' succeeded
+Delete 'frin' succeeded
+Delete 'silicpy' succeeded
+Delete 'dlen' succeeded

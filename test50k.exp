@@ -1,14 +1,40 @@
-Found 'agnosticism' with frequency 237776
-Delete 'agnosticism' succeeded
-NOT Found 'agnosticism'
-NOT Found 'marketplace'
-Add 'marketplace' succeeded
-Found 'marketplace' with frequency 123456
-Autocomplete for 'dress': [ dressed: 6178034  dressing: 5944875  dressers: 674582  ]
-Delete 'dress' failed
-Autocomplete for 'dressma': [ dressmakers: 115332  ]
-Found 'teaspoons' with frequency 787293
-Autocomplete for 'teas': [ teaspoon: 2720378  teaspoons: 787293  teasers: 517803  ]
-Delete 'teasp' failed
-Autocomplete for 'teaspoo': [ teaspoon: 2720378  teaspoons: 787293  teaspoonful: 84227  ]
-Autocomplete for 'superc': [ supercomputer: 596172  supercharged: 542418  supercomputing: 519005  ]
+NOT Found 'grand'
+NOT Found 'and'
+Found 'violet' with frequency 4038524
+NOT Found 'xray'
+Add 'henry' succeeded
+Add 'han' succeeded
+Add 'sinka' succeeded
+Add 'canoo' succeeded
+Add 'frendop' succeeded
+Add 'silicpy' succeeded
+Add 'frin' succeeded
+Add 'dlen' succeeded
+Add 'dnedi' succeeded
+Add 'akalfr' succeeded
+Found 'henry' with frequency 123456
+Found 'han' with frequency 2343
+Found 'frin' with frequency 43434
+Found 'akalfr' with frequency 3232
+Found 'silicpy' with frequency 1759
+Found 'frendop' with frequency 32324
+Autocomplete for 'fis': [ fishing: 40730311  fishermen: 2016086  fists: 979557  ]
+Autocomplete for 'can': [ can: 1242323499  cancer: 65078084  canyon: 11515517  ]
+Autocomplete for 'sili': [ silistra: 73147  silicide: 44044  siliconezone: 32085  ]
+Autocomplete for 'hon': [ hon: 9569133  honduras: 6846795  honeymoon: 4436534  ]
+Autocomplete for 'ak': [ ak: 13486949  akbar: 539549  akita: 440387  ]
+Autocomplete for 'an': [ another: 192535750  answer: 64649558  anal: 59776241  ]
+Autocomplete for 'n': [ now: 611387736  name: 464532702  national: 266376620  ]
+Autocomplete for 'sl': [ slightly: 29994840  slowly: 13000552  sleeve: 11444961  ]
+Autocomplete for 'c': [ can: 1242323499  contact: 645824184  copyright: 373906735  ]
+Autocomplete for 'm': [ more: 1544771673  my: 1059793441  may: 827822032  ]
+Delete 'canoo' succeeded
+Delete 'henry' succeeded
+Delete 'han' succeeded
+Delete 'sinka' succeeded
+Delete 'akalfr' succeeded
+Delete 'lend' failed
+Delete 'frendop' succeeded
+Delete 'frin' succeeded
+Delete 'silicpy' succeeded
+Delete 'dlen' succeeded

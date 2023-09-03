@@ -1,22 +1,40 @@
-Found 'anti' with frequency 61227238
-Add 'antisocial' succeeded
-Found 'anti' with frequency 61227238
-Autocomplete for 'tran': [ transport: 47041301  transactions: 23104294  transexual: 7710514  ]
-Add 'transcend' succeeded
-Found 'transcend' with frequency 1000000
-Autocomplete for 'enc': [ encounter: 7426608  encircling: 194328  encapsulations: 65707  ]
-Delete 'encyclopae' failed
-NOT Found 'encyclopaedi'
-Autocomplete for 'en': [ ends: 33798717  entering: 15167200  ent: 11872105  ]
-Add 'encyclopaedia' succeeded
-Autocomplete for 'ency': [ encyclopaedia: 331441  encyclopaedic: 54385  ]
-Autocomplete for 'ox': [ oxidized: 586703  oxidizing: 343783  oxidants: 235732  ]
-Found 'oxtail' with frequency 33025
-Add 'oxygen' succeeded
-Autocomplete for 'oxy': [ oxygenates: 87049  oxygen: 1000  ]
-Delete 'oxygen' succeeded
-Delete 'oxygen' failed
-Autocomplete for 'blott': [ blotter: 422687  ]
-Add 'distribution' succeeded
-Delete 'distributes' succeeded
-Autocomplete for 'dist': [ distrust: 750887  distort: 690980  distinctiveness: 221435  ]
+NOT Found 'grand'
+NOT Found 'and'
+NOT Found 'violet'
+NOT Found 'xray'
+Add 'henry' succeeded
+Add 'han' succeeded
+Add 'sinka' succeeded
+Add 'canoo' succeeded
+Add 'frendop' succeeded
+Add 'silicpy' succeeded
+Add 'frin' succeeded
+Add 'dlen' succeeded
+Add 'dnedi' succeeded
+Add 'akalfr' succeeded
+Found 'henry' with frequency 123456
+Found 'han' with frequency 2343
+Found 'frin' with frequency 43434
+Found 'akalfr' with frequency 3232
+Found 'silicpy' with frequency 1759
+Found 'frendop' with frequency 32324
+Autocomplete for 'fis': [ fish: 52756224  fishguard: 129014  fishingmagic: 72406  ]
+Autocomplete for 'can': [ canal: 8278196  canals: 1335666  canola: 721609  ]
+Autocomplete for 'sili': [ silicpy: 1759  ]
+Autocomplete for 'hon': [ honselect: 42357  honso: 35100  ]
+Autocomplete for 'ak': [ akoya: 223685  akku: 125102  akuma: 84175  ]
+Autocomplete for 'an': [ an: 1518266684  anti: 61227238  anderson: 24194712  ]
+Autocomplete for 'n': [ new: 1551258643  next: 425903347  natural: 105101771  ]
+Autocomplete for 'sl': [ slick: 2372634  slogan: 1726936  sloppy: 1322519  ]
+Autocomplete for 'c': [ c: 596623239  computer: 224177047  compare: 183202885  ]
+Autocomplete for 'm': [ ms: 68359455  mother: 57432704  moving: 51765877  ]
+Delete 'canoo' succeeded
+Delete 'henry' succeeded
+Delete 'han' succeeded
+Delete 'sinka' succeeded
+Delete 'akalfr' succeeded
+Delete 'lend' succeeded
+Delete 'frendop' succeeded
+Delete 'frin' succeeded
+Delete 'silicpy' succeeded
+Delete 'dlen' succeeded

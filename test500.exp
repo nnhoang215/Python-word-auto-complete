@@ -1,14 +1,40 @@
-Found 'grandsons' with frequency 207864
-Delete 'grandsons' succeeded
-NOT Found 'grandsons'
-Found 'fishermans' with frequency 280414
-Add 'fishermans' failed
-Found 'fishermans' with frequency 280414
+NOT Found 'grand'
+NOT Found 'and'
+NOT Found 'violet'
+NOT Found 'xray'
+Add 'henry' succeeded
+Add 'han' succeeded
+Add 'sinka' succeeded
+Add 'canoo' succeeded
+Add 'frendop' succeeded
+Add 'silicpy' succeeded
+Add 'frin' succeeded
+Add 'dlen' succeeded
+Add 'dnedi' succeeded
+Add 'akalfr' succeeded
+Found 'henry' with frequency 123456
+Found 'han' with frequency 2343
+Found 'frin' with frequency 43434
+Found 'akalfr' with frequency 3232
+Found 'silicpy' with frequency 1759
+Found 'frendop' with frequency 32324
 Autocomplete for 'fis': [ fishermans: 280414  ]
-Delete 'fish' failed
-Autocomplete for 'fish': [ fishermans: 280414  ]
-Found 'separable' with frequency 584172
-Autocomplete for 'separ': [ separable: 584172  ]
-Delete 'separab' failed
-Autocomplete for 'sepa': [ separable: 584172  ]
-Autocomplete for 'undated': [ undated: 926271  ]
+Autocomplete for 'can': [ cantons: 202309  canoo: 3232  ]
+Autocomplete for 'sili': [ silicpy: 1759  ]
+Autocomplete for 'hon': [ ]
+Autocomplete for 'ak': [ akira: 1339862  akebono: 50056  akalfr: 3232  ]
+Autocomplete for 'an': [ anon: 2273948  anvil: 936808  annexation: 912472  ]
+Autocomplete for 'n': [ nst: 519918  nomic: 374700  nte: 354194  ]
+Autocomplete for 'sl': [ slashes: 530627  slackened: 51486  slocombe: 36655  ]
+Autocomplete for 'c': [ camps: 11712039  conformation: 1142434  chime: 1115076  ]
+Autocomplete for 'm': [ mi: 48073394  manuel: 3677641  mutations: 3371343  ]
+Delete 'canoo' succeeded
+Delete 'henry' succeeded
+Delete 'han' succeeded
+Delete 'sinka' succeeded
+Delete 'akalfr' succeeded
+Delete 'dnedi' succeeded
+Delete 'frendop' succeeded
+Delete 'frin' succeeded
+Delete 'silicpy' succeeded
+Delete 'dlen' succeeded

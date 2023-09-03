@@ -34,7 +34,16 @@ class TrieDictionary(BaseDictionary):
         """
         # TO BE IMPLEMENTED
         for word_freq in words_frequencies:
-            self.add_word_frequency(word_freq)
+            current = self.root
+            word = word_freq.word
+
+            for letter in word:
+                if letter not in current.children:
+                    current.children[letter] = TrieNode(letter)
+                current = current.children[letter]
+
+            current.is_last = True
+            current.frequency = word_freq.frequency
 
 
     def search(self, word: str) -> int:

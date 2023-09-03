@@ -1,22 +1,40 @@
-NOT Found 'happen'
-Add 'happen' succeeded
-Found 'happens' with frequency 20031363
-Autocomplete for 'ha': [ happened: 24951096  happens: 20031363  hacker: 10105645  ]
-Add 'happens' failed
-Found 'happens' with frequency 20031363
-Autocomplete for 'test': [ testbeds: 66520  testarossa: 50855  testimonals: 38154  ]
-Delete 'testimonals' succeeded
-NOT Found 'testimonals'
-Autocomplete for 'te': [ teachings: 3113457  tertiary: 2669822  tending: 813856  ]
-Add 'testimonals' succeeded
-Autocomplete for 'te': [ teachings: 3113457  tertiary: 2669822  tending: 813856  ]
-Autocomplete for 'improve': [ improvement: 37133738  ]
-Found 'improvement' with frequency 37133738
-Add 'improvement' failed
-Autocomplete for 'improvement': [ improvement: 37133738  ]
-Delete 'improvement' succeeded
-Delete 'improvement' failed
-Autocomplete for 'improv': [ ]
-Add 'supersonic' succeeded
-Delete 'supersonic' succeeded
-Autocomplete for 'super': [ superb: 7886083  supercenters: 48936  superbra: 39775  ]
+NOT Found 'grand'
+NOT Found 'and'
+NOT Found 'violet'
+NOT Found 'xray'
+Add 'henry' succeeded
+Add 'han' succeeded
+Add 'sinka' succeeded
+Add 'canoo' succeeded
+Add 'frendop' succeeded
+Add 'silicpy' succeeded
+Add 'frin' succeeded
+Add 'dlen' succeeded
+Add 'dnedi' succeeded
+Add 'akalfr' succeeded
+Found 'henry' with frequency 123456
+Found 'han' with frequency 2343
+Found 'frin' with frequency 43434
+Found 'akalfr' with frequency 3232
+Found 'silicpy' with frequency 1759
+Found 'frendop' with frequency 32324
+Autocomplete for 'fis': [ fiscal: 23506040  fishtail: 76534  ]
+Autocomplete for 'can': [ canopy: 3426751  canandaigua: 286886  canteens: 162488  ]
+Autocomplete for 'sili': [ silicpy: 1759  ]
+Autocomplete for 'hon': [ honors: 7724703  honokaa: 35067  ]
+Autocomplete for 'ak': [ aker: 269734  aktion: 136431  akh: 85488  ]
+Autocomplete for 'an': [ analysis: 124949540  angeles: 45983826  analytical: 8266048  ]
+Autocomplete for 'n': [ new: 1551258643  nature: 80659036  normal: 56442762  ]
+Autocomplete for 'sl': [ slave: 10692715  slovenia: 8617537  slovenian: 1986617  ]
+Autocomplete for 'c': [ camera: 89324930  customers: 84317690  covered: 37662109  ]
+Autocomplete for 'm': [ more: 1544771673  made: 287353021  method: 84399520  ]
+Delete 'canoo' succeeded
+Delete 'henry' succeeded
+Delete 'han' succeeded
+Delete 'sinka' succeeded
+Delete 'akalfr' succeeded
+Delete 'lend' failed
+Delete 'frendop' succeeded
+Delete 'frin' succeeded
+Delete 'silicpy' succeeded
+Delete 'dlen' succeeded

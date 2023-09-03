@@ -1,14 +1,40 @@
-NOT Found 'under'
-Delete 'underachievement' succeeded
-NOT Found 'under'
-NOT Found 'sneaky'
-Add 'sneaky' succeeded
-Found 'sneaky' with frequency 67894
-Autocomplete for 'log': [ log: 111170350  logged: 31869263  logos: 18366230  ]
-Delete 'logistics' succeeded
-Autocomplete for 'logis': [ logistic: 1330254  logisys: 133354  logistically: 91980  ]
-NOT Found 'sky'
-Autocomplete for 'skyt': [ skyteam: 69540  skytronic: 45254  skytop: 38128  ]
-Delete 'skytop' succeeded
-Autocomplete for 'sky': [ skyscraper: 631816  skylight: 608911  skyscrapers: 546909  ]
-Autocomplete for 'alameda': [ alameda: 2105485  ]
+Found 'grand' with frequency 56599468
+NOT Found 'and'
+NOT Found 'violet'
+NOT Found 'xray'
+Add 'henry' succeeded
+Add 'han' failed
+Add 'sinka' succeeded
+Add 'canoo' failed
+Add 'frendop' succeeded
+Add 'silicpy' succeeded
+Add 'frin' succeeded
+Add 'dlen' succeeded
+Add 'dnedi' succeeded
+Add 'akalfr' succeeded
+Found 'henry' with frequency 123456
+Found 'han' with frequency 3806541
+Found 'frin' with frequency 43434
+Found 'akalfr' with frequency 3232
+Found 'silicpy' with frequency 1759
+Found 'frendop' with frequency 32324
+Autocomplete for 'fis': [ fishing: 40730311  fisting: 11927246  fisheries: 8764667  ]
+Autocomplete for 'can': [ cancer: 65078084  canadian: 56492789  candidate: 21635540  ]
+Autocomplete for 'sili': [ siliceous: 202885  silicones: 185308  silico: 137163  ]
+Autocomplete for 'hon': [ hong: 32225582  honor: 16787246  honey: 9978043  ]
+Autocomplete for 'ak': [ ak: 13486949  aka: 11570453  akon: 2766008  ]
+Autocomplete for 'an': [ an: 1518266684  another: 192535750  analysis: 124949540  ]
+Autocomplete for 'n': [ new: 1551258643  no: 937112320  news: 755424983  ]
+Autocomplete for 'sl': [ sleep: 29491537  slow: 26870240  slide: 22339084  ]
+Autocomplete for 'c': [ contact: 645824184  click: 536746424  city: 390564835  ]
+Autocomplete for 'm': [ more: 1544771673  most: 416210411  m: 341583838  ]
+Delete 'canoo' succeeded
+Delete 'henry' succeeded
+Delete 'han' succeeded
+Delete 'sinka' succeeded
+Delete 'akalfr' succeeded
+Delete 'lend' succeeded
+Delete 'frendop' succeeded
+Delete 'frin' succeeded
+Delete 'silicpy' succeeded
+Delete 'dlen' succeeded
