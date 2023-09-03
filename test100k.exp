@@ -1,7 +1,13 @@
-Found 'grand' with frequency 56599468
-NOT Found 'and'
-NOT Found 'violet'
-NOT Found 'xray'
+Found 'zach' with frequency 1914201
+Found 'gruffly' with frequency 36988
+Found 'buddah' with frequency 119911
+Found 'casali' with frequency 37721
+Found 'tachometer' with frequency 421796
+Found 'genworth' with frequency 47628
+Found 'spaceborne' with frequency 88329
+Found 'gang' with frequency 16615190
+Found 'wwwazlyrics' with frequency 31259
+NOT Found 'tidallyz'
 Add 'henry' succeeded
 Add 'han' failed
 Add 'sinka' succeeded
@@ -12,12 +18,6 @@ Add 'frin' succeeded
 Add 'dlen' succeeded
 Add 'dnedi' succeeded
 Add 'akalfr' succeeded
-Found 'henry' with frequency 123456
-Found 'han' with frequency 3806541
-Found 'frin' with frequency 43434
-Found 'akalfr' with frequency 3232
-Found 'silicpy' with frequency 1759
-Found 'frendop' with frequency 32324
 Autocomplete for 'fis': [ fishing: 40730311  fisting: 11927246  fisheries: 8764667  ]
 Autocomplete for 'can': [ cancer: 65078084  canadian: 56492789  candidate: 21635540  ]
 Autocomplete for 'sili': [ siliceous: 202885  silicones: 185308  silico: 137163  ]
@@ -28,13 +28,13 @@ Autocomplete for 'n': [ new: 1551258643  no: 937112320  news: 755424983  ]
 Autocomplete for 'sl': [ sleep: 29491537  slow: 26870240  slide: 22339084  ]
 Autocomplete for 'c': [ contact: 645824184  click: 536746424  city: 390564835  ]
 Autocomplete for 'm': [ more: 1544771673  most: 416210411  m: 341583838  ]
-Delete 'canoo' succeeded
-Delete 'henry' succeeded
-Delete 'han' succeeded
-Delete 'sinka' succeeded
-Delete 'akalfr' succeeded
-Delete 'lend' succeeded
-Delete 'frendop' succeeded
-Delete 'frin' succeeded
-Delete 'silicpy' succeeded
-Delete 'dlen' succeeded
+Delete 'zach' succeeded
+Delete 'gruffly' succeeded
+Delete 'buddah' succeeded
+Delete 'casali' succeeded
+Delete 'tachometer' succeeded
+Delete 'genworth' succeeded
+Delete 'spaceborne' succeeded
+Delete 'gang' succeeded
+Delete 'wwwazlyrics' succeeded
+Delete 'tidally' succeeded

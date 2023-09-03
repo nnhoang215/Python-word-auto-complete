@@ -1,7 +1,13 @@
-NOT Found 'grand'
-NOT Found 'and'
-NOT Found 'violet'
-NOT Found 'xray'
+Found 'petite' with frequency 5796298
+Found 'blinux' with frequency 54936
+Found 'sulfite' with frequency 142043
+Found 'butthead' with frequency 229333
+Found 'creak' with frequency 124122
+Found 'ved' with frequency 542056
+Found 'arica' with frequency 92588
+Found 'forcible' with frequency 445980
+Found 'nte' with frequency 354194
+NOT Found 'holbeachz'
 Add 'henry' succeeded
 Add 'han' succeeded
 Add 'sinka' succeeded
@@ -12,12 +18,6 @@ Add 'frin' succeeded
 Add 'dlen' succeeded
 Add 'dnedi' succeeded
 Add 'akalfr' succeeded
-Found 'henry' with frequency 123456
-Found 'han' with frequency 2343
-Found 'frin' with frequency 43434
-Found 'akalfr' with frequency 3232
-Found 'silicpy' with frequency 1759
-Found 'frendop' with frequency 32324
 Autocomplete for 'fis': [ fishermans: 280414  ]
 Autocomplete for 'can': [ cantons: 202309  canoo: 3232  ]
 Autocomplete for 'sili': [ silicpy: 1759  ]
@@ -28,13 +28,13 @@ Autocomplete for 'n': [ nst: 519918  nomic: 374700  nte: 354194  ]
 Autocomplete for 'sl': [ slashes: 530627  slackened: 51486  slocombe: 36655  ]
 Autocomplete for 'c': [ camps: 11712039  conformation: 1142434  chime: 1115076  ]
 Autocomplete for 'm': [ mi: 48073394  manuel: 3677641  mutations: 3371343  ]
-Delete 'canoo' succeeded
-Delete 'henry' succeeded
-Delete 'han' succeeded
-Delete 'sinka' succeeded
-Delete 'akalfr' succeeded
-Delete 'dnedi' succeeded
-Delete 'frendop' succeeded
-Delete 'frin' succeeded
-Delete 'silicpy' succeeded
-Delete 'dlen' succeeded
+Delete 'petite' succeeded
+Delete 'blinux' succeeded
+Delete 'sulfite' succeeded
+Delete 'butthead' succeeded
+Delete 'creak' succeeded
+Delete 'ved' succeeded
+Delete 'arica' succeeded
+Delete 'forcible' succeeded
+Delete 'nte' succeeded
+Delete 'holbeach' succeeded

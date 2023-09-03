@@ -1,7 +1,13 @@
-NOT Found 'grand'
-NOT Found 'and'
-Found 'violet' with frequency 4038524
-NOT Found 'xray'
+Found 'receptors' with frequency 5189813
+Found 'smo' with frequency 900572
+Found 'symons' with frequency 285339
+Found 'inp' with frequency 508991
+Found 'shelved' with frequency 449746
+Found 'panjim' with frequency 48247
+Found 'bensalem' with frequency 199779
+Found 'criminalization' with frequency 114308
+Found 'pollute' with frequency 338167
+NOT Found 'vlaamsz'
 Add 'henry' succeeded
 Add 'han' succeeded
 Add 'sinka' succeeded
@@ -12,12 +18,6 @@ Add 'frin' succeeded
 Add 'dlen' succeeded
 Add 'dnedi' succeeded
 Add 'akalfr' succeeded
-Found 'henry' with frequency 123456
-Found 'han' with frequency 2343
-Found 'frin' with frequency 43434
-Found 'akalfr' with frequency 3232
-Found 'silicpy' with frequency 1759
-Found 'frendop' with frequency 32324
 Autocomplete for 'fis': [ fishing: 40730311  fishermen: 2016086  fists: 979557  ]
 Autocomplete for 'can': [ can: 1242323499  cancer: 65078084  canyon: 11515517  ]
 Autocomplete for 'sili': [ silistra: 73147  silicide: 44044  siliconezone: 32085  ]
@@ -28,13 +28,13 @@ Autocomplete for 'n': [ now: 611387736  name: 464532702  national: 266376620  ]
 Autocomplete for 'sl': [ slightly: 29994840  slowly: 13000552  sleeve: 11444961  ]
 Autocomplete for 'c': [ can: 1242323499  contact: 645824184  copyright: 373906735  ]
 Autocomplete for 'm': [ more: 1544771673  my: 1059793441  may: 827822032  ]
-Delete 'canoo' succeeded
-Delete 'henry' succeeded
-Delete 'han' succeeded
-Delete 'sinka' succeeded
-Delete 'akalfr' succeeded
-Delete 'lend' failed
-Delete 'frendop' succeeded
-Delete 'frin' succeeded
-Delete 'silicpy' succeeded
-Delete 'dlen' succeeded
+Delete 'receptors' succeeded
+Delete 'smo' succeeded
+Delete 'symons' succeeded
+Delete 'inp' succeeded
+Delete 'shelved' succeeded
+Delete 'panjim' succeeded
+Delete 'bensalem' succeeded
+Delete 'criminalization' succeeded
+Delete 'pollute' succeeded
+Delete 'vlaams' succeeded

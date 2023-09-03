@@ -1,7 +1,13 @@
-NOT Found 'grand'
-NOT Found 'and'
-NOT Found 'violet'
-NOT Found 'xray'
+Found 'interex' with frequency 31840
+Found 'earwigs' with frequency 53550
+Found 'lindon' with frequency 215058
+Found 'duping' with frequency 40312
+Found 'hinged' with frequency 1172468
+Found 'superb' with frequency 7886083
+Found 'flintstone' with frequency 181847
+Found 'fatalis' with frequency 63549
+Found 'growing' with frequency 38729323
+NOT Found 'ningalooz'
 Add 'henry' succeeded
 Add 'han' succeeded
 Add 'sinka' succeeded
@@ -12,12 +18,6 @@ Add 'frin' succeeded
 Add 'dlen' succeeded
 Add 'dnedi' succeeded
 Add 'akalfr' succeeded
-Found 'henry' with frequency 123456
-Found 'han' with frequency 2343
-Found 'frin' with frequency 43434
-Found 'akalfr' with frequency 3232
-Found 'silicpy' with frequency 1759
-Found 'frendop' with frequency 32324
 Autocomplete for 'fis': [ fiscal: 23506040  fishtail: 76534  ]
 Autocomplete for 'can': [ canopy: 3426751  canandaigua: 286886  canteens: 162488  ]
 Autocomplete for 'sili': [ silicpy: 1759  ]
@@ -28,13 +28,13 @@ Autocomplete for 'n': [ new: 1551258643  nature: 80659036  normal: 56442762  ]
 Autocomplete for 'sl': [ slave: 10692715  slovenia: 8617537  slovenian: 1986617  ]
 Autocomplete for 'c': [ camera: 89324930  customers: 84317690  covered: 37662109  ]
 Autocomplete for 'm': [ more: 1544771673  made: 287353021  method: 84399520  ]
-Delete 'canoo' succeeded
-Delete 'henry' succeeded
-Delete 'han' succeeded
-Delete 'sinka' succeeded
-Delete 'akalfr' succeeded
-Delete 'lend' failed
-Delete 'frendop' succeeded
-Delete 'frin' succeeded
-Delete 'silicpy' succeeded
-Delete 'dlen' succeeded
+Delete 'interex' succeeded
+Delete 'earwigs' succeeded
+Delete 'lindon' succeeded
+Delete 'duping' succeeded
+Delete 'hinged' succeeded
+Delete 'superb' succeeded
+Delete 'flintstone' succeeded
+Delete 'fatalis' succeeded
+Delete 'growing' succeeded
+Delete 'ningaloo' succeeded
