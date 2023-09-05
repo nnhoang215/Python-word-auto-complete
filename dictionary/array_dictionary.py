@@ -105,11 +105,18 @@ class ArrayDictionary(BaseDictionary):
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'prefix_word'
         """
         time_1 = perf_counter_ns()
+
+        # Create a dummy WordFrequency object for the prefix word
+        dummy_word = WordFrequency(prefix_word, 0)
+
+        # Caclulate the index to insert prefix word
+        index = bisect.bisect_left(self.words, dummy_word)
+
         # Create a list of possible words having that prefix
         autocomplete_list = []
 
-        # Only scan the part of the list behind that index to optimize scanning
-        for word_freq in self.words:
+        # Scan part of the list (starting from the position to insert prefix word) 
+        for word_freq in self.words[index:]:
 
             # If a word starts with the prefix, append it to the possible word list
             if word_freq.word.startswith(prefix_word):
