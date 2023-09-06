@@ -20,3 +20,13 @@ python3 dictionary_test_script.py -v ./ array data5k.txt test5k.in
 python3 dictionary_test_script.py -v ./ array data10k.txt test10k.in
 python3 dictionary_test_script.py -v ./ array data50k.txt test50k.in
 python3 dictionary_test_script.py -v ./ array data100k.txt test100k.in
+
+# default tests
+python3 dictionary_test_script.py -v ./ linkedlist sampleData.txt test1.in test2.in
+python3 dictionary_test_script.py -v ./ linkedlist sampleDataToy.txt testToy.in
+
+python3 dictionary_test_script.py -v ./ trie sampleData.txt test1.in test2.in
+python3 dictionary_test_script.py -v ./ trie sampleDataToy.txt testToy.in
+
+python3 dictionary_test_script.py -v ./ array sampleData.txt test1.in test2.in
+python3 dictionary_test_script.py -v ./ array sampleDataToy.txt testToy.in
