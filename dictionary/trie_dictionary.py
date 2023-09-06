@@ -1,4 +1,3 @@
-from time import perf_counter_ns
 from dictionary.base_dictionary import BaseDictionary
 from dictionary.word_frequency import WordFrequency
 
@@ -24,7 +23,6 @@ class TrieNode:
 class TrieDictionary(BaseDictionary):
 
     def __init__(self):
-        # TO BE IMPLEMENTED
         self.root = TrieNode()
 
     def build_dictionary(self, words_frequencies: [WordFrequency]):
@@ -32,7 +30,6 @@ class TrieDictionary(BaseDictionary):
         construct the data structure to store nodes
         @param words_frequencies: list of (word, frequency) to be stored
         """
-        # TO BE IMPLEMENTED
         for word_freq in words_frequencies:
 
             # Starting from the root
@@ -58,21 +55,15 @@ class TrieDictionary(BaseDictionary):
         @param word: the word to be searched
         @return: frequency > 0 if found and 0 if NOT found
         """
-        # TO BE IMPLEMENTED
-        time_1 = perf_counter_ns()
-        # Tranverse the trie to find the word
+        # traverse the trie to find the word
         node = self._traverse_word(word)
 
         # Return the word if found
         # (Found the nodes corresponds to the letters and the node contains 
         # the last character is last node in a word) 
         if node and node.is_last:
-            time_2 = perf_counter_ns()
-            print("Search:", time_2 - time_1)
             return node.frequency
         
-        time_3 = perf_counter_ns()
-        print("Search:", time_3 - time_1)
         return 0
 
 
@@ -82,7 +73,6 @@ class TrieDictionary(BaseDictionary):
         @param word_frequency: (word, frequency) to be added
         :return: True whether succeeded, False when word is already in the dictionary
         """
-        time_1 = perf_counter_ns()
         # Starting from the root
         current = self.root
         word = word_frequency.word
@@ -95,15 +85,11 @@ class TrieDictionary(BaseDictionary):
 
         # Return false if found the word already exists in the trie
         if current.is_last:
-            time_2 = perf_counter_ns()
-            print("Add:", time_2 - time_1)
             return False
 
         # Otherwise, add it to the trie, set the node containing the last letter
         current.is_last = True
         current.frequency = word_frequency.frequency
-        time_3 = perf_counter_ns()
-        print("Add:", time_3 - time_1)
         return True
 
     def delete_word(self, word: str) -> bool:
@@ -112,21 +98,16 @@ class TrieDictionary(BaseDictionary):
         @param word: word to be deleted
         @return: whether succeeded, e.g. return False when point not found
         """
-        time_1 = perf_counter_ns()
 
-        # Tranverse the trie to find the deleted word
+        # traverse the trie to find the deleted word
         node = self._traverse_word(word)
 
         # Delete the word if found and return true
         if node and node.is_last:
             node.is_last = False
-            time_2 = perf_counter_ns()
-            print("Delete:", time_2 - time_1)
             return True
         
         # Return false if do not found it
-        time_3 = perf_counter_ns()
-        print("Delete:", time_3 - time_1)
         return False
 
 
@@ -136,15 +117,12 @@ class TrieDictionary(BaseDictionary):
         @param word: word to be autocompleted
         @return: a list (could be empty) of (at most) 3 most-frequent words with prefix 'word'
         """
-        time_1 = perf_counter_ns()
 
-        # Tranverse the trie to find the prefix word
+        # traverse the trie to find the prefix word
         node = self._traverse_word(word)
 
         # If do not find the prefix word, return an empty array
         if not node:
-            time_2 = perf_counter_ns()
-            print("Autocomplete:", time_2 - time_1)
             return []
 
         autocomplete_list = []
@@ -154,8 +132,6 @@ class TrieDictionary(BaseDictionary):
 
         # Sort the possible words list in reverse order
         autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)
-        time_3 = perf_counter_ns()
-        print("Autocomplete:", time_3 - time_1)
 
         return autocomplete_list[:3]
 
@@ -163,7 +139,7 @@ class TrieDictionary(BaseDictionary):
         # Starting from the root
         current = self.root
 
-        # Tranverse the trie based on the letters in the word 
+        # traverse the trie based on the letters in the word 
         for letter in word:
             if letter not in current.children:
                 return None
@@ -177,7 +153,7 @@ class TrieDictionary(BaseDictionary):
         if node.is_last:
             result_list.append(WordFrequency(word_prefix, node.frequency))
 
-        # Recursive calls: Tranverse along all the children of the prefix node to find
+        # Recursive calls: traverse along all the children of the prefix node to find
         # all the words starting with that prefix
         for letter, child_node in node.children.items():
             self._collect_autocomplete_words(
