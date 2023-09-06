@@ -114,13 +114,18 @@ class ArrayDictionary(BaseDictionary):
 
         # Create a list of possible words having that prefix
         autocomplete_list = []
-
+        
+        if index == len(self.words):
+            return autocomplete_list
+        
         # Scan part of the list (starting from the position to insert prefix word) 
         for word_freq in self.words[index:]:
-
             # If a word starts with the prefix, append it to the possible word list
             if word_freq.word.startswith(prefix_word):
                 autocomplete_list.append(word_freq)
+            else:
+                break
+                    
 
         # Sort the list of possible words in descending order based on the word frequency
         autocomplete_list.sort(key=lambda x: x.frequency, reverse=True)

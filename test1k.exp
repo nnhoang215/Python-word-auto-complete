@@ -1,7 +1,13 @@
-NOT Found 'grand'
-NOT Found 'and'
-NOT Found 'violet'
-NOT Found 'xray'
+Found 'fromt' with frequency 37724
+Found 'pertwee' with frequency 64182
+Found 'sweltering' with frequency 145446
+Found 'riaz' with frequency 65248
+Found 'makinen' with frequency 45008
+Found 'comission' with frequency 124886
+Found 'greenbush' with frequency 269277
+Found 'wwwlittlewoodscom' with frequency 30982
+Found 'warpath' with frequency 84226
+NOT Found 'moneyweekz'
 Add 'henry' succeeded
 Add 'han' succeeded
 Add 'sinka' succeeded
@@ -12,12 +18,6 @@ Add 'frin' succeeded
 Add 'dlen' succeeded
 Add 'dnedi' succeeded
 Add 'akalfr' succeeded
-Found 'henry' with frequency 123456
-Found 'han' with frequency 2343
-Found 'frin' with frequency 43434
-Found 'akalfr' with frequency 3232
-Found 'silicpy' with frequency 1759
-Found 'frendop' with frequency 32324
 Autocomplete for 'fis': [ ]
 Autocomplete for 'can': [ candlestick: 597438  canadas: 103105  canonized: 97556  ]
 Autocomplete for 'sili': [ silicpy: 1759  ]
@@ -28,13 +28,13 @@ Autocomplete for 'n': [ neumann: 1401942  nestled: 1258420  nagar: 994395  ]
 Autocomplete for 'sl': [ slatkin: 94920  slunk: 40167  ]
 Autocomplete for 'c': [ control: 215560453  client: 69189527  crime: 40361756  ]
 Autocomplete for 'm': [ modeling: 15474514  minolta: 7160032  mib: 3731368  ]
-Delete 'canoo' succeeded
-Delete 'henry' succeeded
-Delete 'han' succeeded
-Delete 'sinka' succeeded
-Delete 'akalfr' succeeded
-Delete 'lend' failed
-Delete 'frendop' succeeded
-Delete 'frin' succeeded
-Delete 'silicpy' succeeded
-Delete 'dlen' succeeded
+Delete 'fromt' succeeded
+Delete 'pertwee' succeeded
+Delete 'sweltering' succeeded
+Delete 'riaz' succeeded
+Delete 'makinen' succeeded
+Delete 'comission' succeeded
+Delete 'greenbush' succeeded
+Delete 'wwwlittlewoodscom' succeeded
+Delete 'warpath' succeeded
+Delete 'moneyweek' succeeded
